@@ -1,24 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 import { Router } from '@angular/router';
-import { moveIn, fallIn } from '../../router.animations'
 
 
 @Component({
-  selector: 'app-email',
-  templateUrl: './email.component.html',
-  styleUrls: ['./email.component.css'],
-  animations: [moveIn(), fallIn()],
-  host: {'[@moveIn]': ''}
+  selector: 'app-signin',
+  templateUrl: './signin.component.html',
+  styleUrls: ['./signin.component.css'],
 })
-export class EmailComponent implements OnInit {
+export class SigninComponent implements OnInit {
   state: string = '';
   error: any;
 
   constructor(public af: AngularFire,private router: Router) {
     this.af.auth.subscribe(auth => { 
       if(auth) {
-        this.router.navigateByUrl('/members');
+        this.router.navigateByUrl('/home');
       }
     });
   }
@@ -38,7 +35,7 @@ export class EmailComponent implements OnInit {
         method: AuthMethods.Password,
       }).then((success) => {
         console.log(success);
-        this.router.navigate(['/members']);
+        this.router.navigate(['/home']);
       }).catch((err) => {
         console.log(err);
         this.error = err;

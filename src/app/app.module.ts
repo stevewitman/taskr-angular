@@ -5,8 +5,8 @@ import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { LoginComponent } from './components/login/login.component';
-import { EmailComponent } from './components/email/email.component';
+import { SplashComponent } from './components/splash/splash.component';
+import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { HomeComponent } from './components/home/home.component';
 import { AuthGuard } from './auth.service';
@@ -24,8 +24,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     NavbarComponent,
-    LoginComponent,
-    EmailComponent,
+    SplashComponent,
+    SigninComponent,
     SignupComponent,
     HomeComponent
   ],

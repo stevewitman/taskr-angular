@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 import { Router } from '@angular/router';
-import { moveIn, fallIn } from '../../router.animations';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
-  animations: [moveIn(), fallIn()],
-  host: {'[@moveIn]': ''}
 })
 export class SignupComponent implements OnInit {
   state: string = '';
@@ -28,7 +25,7 @@ export class SignupComponent implements OnInit {
         email: formData.value.email,
         password: formData.value.password
       }).then((success) => {
-        this.router.navigate(['/members'])
+        this.router.navigate(['/home'])
       }).catch((err) => {
         this.error = err;
       })
