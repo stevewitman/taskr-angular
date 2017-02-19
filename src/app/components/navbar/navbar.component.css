@@ -1,5 +1,18 @@
 .navbar-brand {
   font-family: 'Audiowide';
-  font-size: 30px;
-  color: #BBB;
+  font-size: 24px;
+  color: #c4e3f3;
+}
+.taskr-logo-md {
+  font-size: 18px;
+  color: #c4e3f3;
+}
+.taskr-logo-md:hover {
+  color: #fff;
+}
+#bootstrap-hamburger .icon-bar {
+  background-color: #c4e3f3;
+}
+#bootstrap-hamburger:hover .icon-bar {
+  background-color: #fff;
 }
